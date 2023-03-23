@@ -1,1 +1,1 @@
-ceci est la page de présentation du site avec chabot utilisant django
+## Page de présentation du site avec chabot utilisant django
