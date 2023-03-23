@@ -1,3 +1,4 @@
+## --- NE PAS MODIFIER ---- NE PAS ECRIRE ---- 
 ## Page de présentation du site avec chabot utilisant django
 
 
