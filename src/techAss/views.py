@@ -1,12 +1,29 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from .models import TechAssPages
 
 # Create your views here.
 def home(request):
-    template = loader.get_template('index.html')
-    data = {"prenom":"Les Décodeuses"}
+    rsChatbotPage = TechAssPages.objects.all()
 
+    data = {
+        "prenom":"Les Décodeuses",
+        "chatbotPage": rsChatbotPage,
+            }
+
+    template = loader.get_template('index.html')
+    return HttpResponse(template.render(data))
+
+def chatbot(request):
+    if request.GET.get("page"):
+        rs = TechAssPages.objects.get(title = request.GET["page"])
+    else:
+        rs = TechAssPages.objects.get(title="")
+        
+    data = {'title': rs.title, "content": rs.content, "date": rs.date}
+
+    template = loader.get_template("chatbot.html")
     return HttpResponse(template.render(data))
 
 

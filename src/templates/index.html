@@ -19,7 +19,7 @@
 
     <!--Google fonts links-->
     <link
-      href="{% static 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i' %}"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i'"
       rel="stylesheet"
     />
 
@@ -47,7 +47,7 @@
     <!--Theme Responsive css-->
     <link
       rel="stylesheet"
-      href="{% static 'soft-tech/assets/css/responsive.css}"
+      href="{% static 'soft-tech/assets/css/responsive.css' %}"
     />
 
     <script src="{% static 'soft-tech/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
@@ -61,6 +61,25 @@
         your experience.
       </p>
     <![endif]-->
+
+    <!--teste pour les liens -->
+
+        <table>
+      <tr>
+        <th>page</th>
+      </tr>
+      {% for page in pages %}
+
+      <tr>
+        <td>
+          <a href="/chatbot/?page={{page.titleChatbot}}"> {{page.titleChatbot}}</a>
+        </td>
+
+        <td>{{page.date}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <!------------------------->
 
     <!-- Sections -->
     <section id="social" class="social">
@@ -111,7 +130,7 @@
           </button>
           <a class="navbar-brand" href="#"
             ><img
-              src="{% static './soft-tech/assets/images/logo.png'%}"
+              src="{% static 'images.jpg' %}"
               alt="Logo"
           /></a>
         </div>
@@ -119,7 +138,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="{% static '#index' %}">Home</a></li>
+            <li class="active"><a href="index'">Home</a></li>
             <li><a href="{% static '#features' %}">Logiciels</a></li>
             <li>
               <a href="{% static '#service' %}">Programmations</a>
@@ -130,7 +149,7 @@
             </li>
             <li><a href="{% static '#business' %}">Tendances techs</a></li>
             <li><a href="{% static '#contact' %}">Contact</a></li>
-            <li class="login"><a href="#">Sign In</a></li>
+            <li class="login"><a href="#">S'inscrire</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -146,12 +165,9 @@
             <div class="home-wrapper">
               <div class="col-md-10 col-md-offset-1">
                 <div class="home-content">
-                  <h1>Bring your Big Data to Life With wonderTechs</h1>
+                  <h1>WonderTechs la solution a vos questions</h1>
                   <p>
-                    Blue Lance transforms your company's data into rich visuals
-                    for you to collect and organize so you can focus on what
-                    matters to you. Stay in the know, spot trends as they
-                    happen, and push your business further.
+                   bienvenu sur notre site d assistance techno exclusivement feminines pour vous accompagner et aider  
                   </p>
 
                   <div class="row">
@@ -161,12 +177,12 @@
                           <input
                             type="text"
                             class="form-control"
-                            placeholder="Enter your email address"
+                            placeholder="Entrez votre email"
                           />
                           <input
                             type="submit"
                             class="form-control"
-                            value="Use It Free"
+                            value="Essayer"
                           />
                         </div>
                         <!-- /input-group -->
@@ -189,7 +205,7 @@
             <div class="col-sm-6">
               <div class="single_features_left text-center">
                 <img
-                  src="{% static './soft-tech/assets/images/feature-2.jpg' %}"
+                  src="{% static './femmes/femme1.jpg' %}"
                   alt=""
                 />
               </div>
@@ -197,7 +213,7 @@
 
             <div class="col-sm-6 margin-top-60">
               <div class="single_features_right">
-                <h2>OUR PRODUCT</h2>
+                <h2>Notre offre d'assistance Technique</h2>
                 <p>
                   Fusce dapibus, tellus ac cursus commodo, tortor mauris
                   condimentum. Duis mollis, est non commodo luctus, nisi erat
@@ -209,7 +225,7 @@
                   <li>Suspendisse urna nibh.</li>
                 </ul>
                 <div class="features_buttom">
-                  <a href="" class="btn btn-default">Read More</a>
+                  <a href="" class="btn btn-default">En savoir plus</a>
                 </div>
               </div>
             </div>
@@ -224,7 +240,7 @@
           <div class="main_features_content2">
             <div class="col-sm-6 margin-top-60">
               <div class="single_features_right">
-                <h2>PRODUCT DESCRIPTIONS</h2>
+                <h2>Description de nos services</h2>
                 <p>
                   Fusce dapibus, tellus ac cursus commodo, tortor mauris
                   condimentum. Duis mollis, est non commodo luctus, nisi erat
@@ -236,14 +252,14 @@
                   <li>Suspendisse urna nibh.</li>
                 </ul>
                 <div class="features_buttom">
-                  <a href="" class="btn btn-default">Read More</a>
+                  <a href="" class="btn btn-default">En savoir plus</a>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="single_features_left text-center">
                 <img
-                  src="{% static './soft-tech/assets/images/feature-1.jpg' %}"
+                  src="{% static './femmes/femme2.jpg' %}"
                   alt=""
                 />
               </div>
@@ -259,7 +275,7 @@
         <div class="row">
           <div class="main_service2">
             <div class="head_title text-center">
-              <h2>SERVICES WE PROVIDE</h2>
+              <h2>Les services que nous vous proposons</h2>
               <p>
                 condimentum. Duis mollis, est non commodo luctus, nisi erat
                 porttitor ligula.
@@ -276,7 +292,7 @@
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>Branding</h2>
+                    <h2>les actualitées des logiciels </h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -293,7 +309,7 @@
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>Branding</h2>
+                    <h2>Les actualitées de programmation</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -310,7 +326,7 @@
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>Branding</h2>
+                    <h2>les actualitées sur la Cybersécurité</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -327,7 +343,24 @@
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>Branding</h2>
+                    <h2>les actualités appareils electroniques</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                      sed diam nonummy nibh.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                <div class="single_service2">
+                  <div class="single_service_left">
+                    <img
+                      src="{% static './soft-tech/assets/images/flaticon4.png' %}"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single_service_right">
+                    <h2>tendances tech</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -345,7 +378,7 @@
     <!-- Sections -->
     <section id="price" class="price sections">
       <div class="head_title text-center">
-        <h1>Affordable Services Package</h1>
+        <h1>Nos offres</h1>
         <p>
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -362,7 +395,7 @@
               id="monthly-2"
               checked
             />
-            <label for="monthly-2">Business</label>
+            <label for="monthly-2">Entreprises</label>
             <input
               type="radio"
               name="duration-2"
@@ -383,9 +416,9 @@
                   <h2>Basic</h2>
 
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">30</span>
-                    <span class="cd-duration">mo</span>
+                    <span class="cd-duration">mois</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -410,7 +443,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -420,9 +453,9 @@
                   <h2>Basic</h2>
 
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">320</span>
-                    <span class="cd-duration">yr</span>
+                    <span class="cd-duration">Année</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -447,7 +480,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -459,11 +492,11 @@
             <ul class="cd-pricing-wrapper">
               <li data-type="monthly" class="is-visible">
                 <header class="cd-pricing-header">
-                  <h2>Popular</h2>
+                  <h2>POPULAIRE</h2>
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">60</span>
-                    <span class="cd-duration">mo</span>
+                    <span class="cd-duration">mois</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -488,7 +521,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -498,9 +531,9 @@
                   <h2>Popular</h2>
 
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">630</span>
-                    <span class="cd-duration">yr</span>
+                    <span class="cd-duration">Année</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -525,7 +558,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -540,9 +573,9 @@
                   <h2>Premier</h2>
 
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">90</span>
-                    <span class="cd-duration">mo</span>
+                    <span class="cd-duration">mois</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -567,7 +600,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -577,9 +610,9 @@
                   <h2>Premier</h2>
 
                   <div class="cd-price">
-                    <span class="cd-currency">$</span>
+                    <span class="cd-currency">€</span>
                     <span class="cd-value">950</span>
-                    <span class="cd-duration">yr</span>
+                    <span class="cd-duration">Année</span>
                   </div>
                 </header>
                 <!-- .cd-pricing-header -->
@@ -604,7 +637,7 @@
                 <!-- .cd-pricing-body -->
 
                 <footer class="cd-pricing-footer">
-                  <a class="cd-select" href="#">Purchase</a>
+                  <a class="cd-select" href="#">Adherer</a>
                 </footer>
                 <!-- .cd-pricing-footer -->
               </li>
@@ -749,7 +782,7 @@
         <div class="row">
           <div class="main_contact whitebackground">
             <div class="head_title text-center">
-              <h2>GET IN TOUCH</h2>
+              <h2>Contactez nous</h2>
               <p>
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris
                 condimentum. Duis mollis, est non commodo luctus, nisi erat
@@ -836,14 +869,11 @@
             <div class="col-md-8 col-sm-12 col-xs-12">
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="menu-item">
-                  <h5>Quick Links</h5>
+                  <h5>Liens Rapides</h5>
                   <ul>
-                    <li>POWER BI DESKTOP</li>
+                    <li>ORDINATEUR DE BUREAU</li>
                     <li>MOBILE</li>
-                    <li>SEE ALL DOWNLOADS</li>
-                    <li>POWER BI DESKTOP</li>
-                    <li>MOBILE</li>
-                    <li>SEE ALL DOWNLOADS</li>
+                    <li>VOIR TOUS LES TÉLÉCHARGEMENT</li>
                   </ul>
                 </div>
               </div>
@@ -852,9 +882,9 @@
                 <div class="menu-item">
                   <h5>Legal</h5>
                   <ul>
-                    <li>PRIVACY & COOKIES</li>
-                    <li>TERMS OF USE</li>
-                    <li>TRADEMARKS</li>
+                    <li>VIE PRIVÉE ET COOKIES</li>
+                    <li>CONDITIONS D'UTILISATION</li>
+                    <li>MARQUES DE COMMERCE</li>
                   </ul>
                 </div>
               </div>
@@ -867,7 +897,6 @@
                     <li>DEVELOPERS</li>
                     <li>BLOG</li>
                     <li>NEWSLETTER</li>
-                    <li>PYRAMID ANALYTICS</li>
                   </ul>
                 </div>
               </div>
@@ -884,12 +913,12 @@
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Enter your email address"
+                    placeholder="Entrez votre email"
                   />
                   <input
                     type="submit"
                     class="form-control"
-                    value="Use It Free"
+                    value="Essayer"
                   />
                 </div>
               </div>
@@ -907,7 +936,7 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="footer-brand">
                 <img
-                  src="{% static './soft-tech/assets/images/logo.png' %}"
+                  src="{% static 'images.jpg' %}"
                   alt="logo"
                 />
               </div>
@@ -916,24 +945,24 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="copyright">
                 <p>
-                  Made with <i class="fa fa-heart"></i> by
+                  fait avec <i class="fa fa-heart"></i> par
                   <a
                     target="_blank"
                     href="{% static 'https://bootstrapthemes.co' %}"
                   >
                     Bootstrap Themes </a
-                  >2016. All rights reserved.
+                  >2016. Tous droits réservés.
                 </p>
               </div>
 
               <div class="copyright">
                 <p>
-                  Distributed<i class="fa fa-heart"></i> by
+                 Distribué <i class="fa fa-heart"></i> par
                   <a
                     target="_blank"
                     href="{% static 'https://themewagon.com/' %}"
                     >Themewagon</a
-                  >2016. All rights reserved.
+                  >2016. Tous droits réservés.
                 </p>
               </div>
             </div>
@@ -949,8 +978,8 @@
     <script src="{% static './soft-tech/assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
     <script src="{% static './soft-tech/assets/js/vendor/bootstrap.min.js' %}"></script>
 
-    <script src=" {% static './soft-tech/assets/js/plugins.js' %}"></script>
-    <script src=" {% static './soft-tech/asassets/js/modernizr.js' %}"></script>
-    <script src=" {% static './soft-tech/assets/js/main.js' %}"></script>
+    <script src="{% static './soft-tech/assets/js/plugins.js' %}"></script>
+    <script src="{% static './soft-tech/asassets/js/modernizr.js' %}"></script>
+    <script src="{% static './soft-tech/assets/js/main.js' %}"></script>
   </body>
 </html>
