@@ -14,4 +14,8 @@ class Echange(models.Model):
 class EchangeAdmin(admin.ModelAdmin):
     list_display = ('question', 'reponse')
     list_filter = ("question",)
-
+    
+class Question(models.Model):
+    text = models.TextField()
+    answer = models.TextField()
+    

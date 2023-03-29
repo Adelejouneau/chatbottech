@@ -7,15 +7,26 @@
     <title>chatbot</title>
   </head>
   <body>
+    {% csrf_token %}
     <h1>{{titleChatbot}}</h1>
     <h2>{{dateChatbot}}</h2>
     <p>{{contentChatbot}}</p>
-    <p>mettre une phrase d accroche</p>
+    <h1>chatbot</h1>
 
-    <form action="">
-      <label for="input">zoeijfozejf</label>
-      <input type="text" name="formulaire" id="formulaire" />
-      <button type="submit">ma saisie</button>
+    {% for question in questions %}
+    <h2>{{ question.text}}</h2>
+    <p>{{ question.answer}}</p>
+
+    <form action="chatbot.html">
+      <label for="input"></label>
+      <input
+        type="text"
+        name="formulaire"
+        id="formulaire"
+        placeholder="Entrez votre question..."
+      />
+      <button type="submit">Valider</button>
     </form>
+    {% endfor %}
   </body>
 </html>
