@@ -44,6 +44,11 @@
       href="{% static './soft-tech/assets/css/style.css' %}"
     />
 
+    <script
+      src="https://kit.fontawesome.com/2f202ef2b9.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!--Theme Responsive css-->
     <link
       rel="stylesheet"
@@ -65,7 +70,7 @@
 
     <!--teste pour les liens -->
 
-        <!-- <table>
+    <!-- <table>
       <tr>
         <th></th>
       </tr>
@@ -129,17 +134,20 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"
-            ><img
-              src="{% static 'images.jpg' %}"
+
+          <a class="navbar-brand" href="#">
+            <img
+              src="{% static './soft-tech/assets/images/logo.svg' %}"
+              width="100"
               alt="Logo"
-          /></a>
+            />
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index'">Home</a></li>
+            <li class="active"><a href="#">Home</a></li>
             <li><a href="{% static '#features' %}">Logiciels</a></li>
             <li>
               <a href="{% static '#service' %}">Programmations</a>
@@ -169,7 +177,8 @@
                 <div class="home-content">
                   <h1>WonderTechs la solution a vos questions</h1>
                   <p>
-                   bienvenu sur notre site d assistance techno exclusivement feminines pour vous accompagner et aider  
+                    bienvenu sur notre site d assistance techno exclusivement
+                    feminines pour vous accompagner et aider
                   </p>
 
                   <div class="row">
@@ -198,7 +207,7 @@
         </div>
       </div>
     </header>
-{% if page == 'detail' %}
+    {% if page == 'detail' %}
 
     <!-- Sections -->
     <section id="features" class="features sections">
@@ -207,10 +216,7 @@
           <div class="main_features_content2">
             <div class="col-sm-6">
               <div class="single_features_left text-center">
-                <img
-                  src="{% static './femmes/femme1.jpg' %}"
-                  alt=""
-                />
+                <img src="{% static './logiciel/main-robot.jpg' %}" alt="" />
               </div>
             </div>
 
@@ -261,10 +267,7 @@
             </div>
             <div class="col-sm-6">
               <div class="single_features_left text-center">
-                <img
-                  src="{% static './femmes/femme2.jpg' %}"
-                  alt=""
-                />
+                <img src="{% static './femmes/femme2.jpg' %}" alt="" />
               </div>
             </div>
           </div>
@@ -289,13 +292,10 @@
               <div class="col-md-6 col-sm-6">
                 <div class="single_service2">
                   <div class="single_service_left">
-                    <img
-                      src="{% static './soft-tech/assets/images/flaticon1.png' %}"
-                      alt=""
-                    />
+                    <img src="{% static './logiciel/logiciel.png' %}" alt="" />
                   </div>
                   <div class="single_service_right">
-                    <h2>les actualitées des logiciels </h2>
+                    <h2>Logiciels</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -307,12 +307,12 @@
                 <div class="single_service2">
                   <div class="single_service_left">
                     <img
-                      src="{% static './soft-tech/assets/images/flaticon2.png' %}"
+                      src="{% static './logiciel/langage-de-codage.png' %}"
                       alt=""
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>Les actualitées de programmation</h2>
+                    <h2>Programmation</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -324,12 +324,12 @@
                 <div class="single_service2">
                   <div class="single_service_left">
                     <img
-                      src="{% static './soft-tech/assets/images/flaticon3.png' %}"
+                      src="{% static './soft-tech/assets/images/la-securite-sur-internet.png' %}"
                       alt=""
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>les actualitées sur la Cybersécurité</h2>
+                    <h2>Cybersécurité</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -341,12 +341,12 @@
                 <div class="single_service2">
                   <div class="single_service_left">
                     <img
-                      src="{% static './soft-tech/assets/images/flaticon4.png' %}"
-                      alt=""
+                      src="{% static './soft-tech/assets/images/main.png' %}"
+                      alt="Maan Icons"
                     />
                   </div>
                   <div class="single_service_right">
-                    <h2>les actualités appareils electroniques</h2>
+                    <h2>Électroniques</h2>
                     <p>
                       Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                       sed diam nonummy nibh.
@@ -358,7 +358,7 @@
                 <div class="single_service2">
                   <div class="single_service_left">
                     <img
-                      src="{% static './soft-tech/assets/images/flaticon4.png' %}"
+                      src="{% static './soft-tech/assets/images/appareil-electronique.png' %}"
                       alt=""
                     />
                   </div>
@@ -657,7 +657,7 @@
     <section id="business" class="portfolio sections">
       <div class="container">
         <div class="head_title text-center">
-          <h1>Notre agence d assistance tech </h1>
+          <h1>Notre agence d assistance tech</h1>
           <p>
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -668,7 +668,7 @@
           <div class="portfolio-wrapper text-center">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
-                <i class="fa fa-book"></i>
+                <i class="fa-solid fa-gears"></i>
                 <div class="separator"></div>
                 <h4>Logiciels</h4>
                 <p>
@@ -681,7 +681,7 @@
 
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
-                <i class="fa fa-bug"></i>
+                <i class="fa-solid fa-code"></i>
                 <div class="separator"></div>
                 <h4>Programmations</h4>
                 <p>
@@ -694,7 +694,7 @@
 
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
-                <i class="fa fa-gears"></i>
+                <i class="fa-solid fa-shield-halved"></i>
                 <div class="separator"></div>
                 <h4>Cybersécurités</h4>
                 <p>
@@ -707,9 +707,9 @@
 
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
-                <i class="fa fa-external-link"></i>
+                <i class="fa-regular fa-floppy-disk"></i>
                 <div class="separator"></div>
-                <h4>Appareils électronqiues</h4>
+                <h4>Électronquies</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -725,9 +725,9 @@
           <div class="portfolio-wrapper2 text-center">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
-                <i class="fa fa-coffee"></i>
+                <i class="fa-solid fa-pager"></i>
                 <div class="separator"></div>
-                <h4>Tendances Technologique</h4>
+                <h4>Tendances</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -736,7 +736,7 @@
               </div>
             </div>
 
-            <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
                 <i class="fa fa-tree"></i>
                 <div class="separator"></div>
@@ -747,9 +747,9 @@
                   easy-to-use report authoring experience.
                 </p>
               </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
                 <i class="fa fa-paper-plane-o"></i>
                 <div class="separator"></div>
@@ -759,10 +759,10 @@
                   canvas, a broad range of modern data visualizations, and an
                   easy-to-use report authoring experience.
                 </p>
-              </div> -->
-            <!-- </div> -->
+              </div>
+            </div>
 
-            <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
                 <i class="fa fa-folder-open"></i>
                 <div class="separator"></div>
@@ -772,7 +772,7 @@
                   canvas, a broad range of modern data visualizations, and an
                   easy-to-use report authoring experience.
                 </p>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -918,11 +918,7 @@
                     class="form-control"
                     placeholder="Entrez votre email"
                   />
-                  <input
-                    type="submit"
-                    class="form-control"
-                    value="Essayer"
-                  />
+                  <input type="submit" class="form-control" value="Essayer" />
                 </div>
               </div>
             </div>
@@ -930,9 +926,7 @@
         </div>
       </div>
     </section>
-{%endif%}
-
-{%if page == 'chatbot'%}
+    {%endif%} {%if page == 'chatbot'%}
     <h1>{{titleChatbot}}</h1>
     <h2>{{dateChatbot}}</h2>
     <p>{{contentChatbot}}</p>
@@ -943,10 +937,15 @@
       <p>{{answer}}</p>
 
       <label for="input"></label>
-      <input type="text" name="formulaire" id="formulaire" placeholder="Entrez vos questions..."/>{{response}}
+      <input
+        type="text"
+        name="formulaire"
+        id="formulaire"
+        placeholder="Entrez vos questions..."
+      />{{response}}
       <button type="submit">Valider</button>
     </form>
-{%endif%}
+    {%endif%}
 
     <!--Footer-->
     <footer id="footer" class="footer">
@@ -956,8 +955,9 @@
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="footer-brand">
                 <img
-                  src="{% static 'images.jpg' %}"
+                  src="{% static './soft-tech/assets/images/logo.svg' %}"
                   alt="logo"
+                  width="200"
                 />
               </div>
             </div>
@@ -977,7 +977,7 @@
 
               <div class="copyright">
                 <p>
-                 Distribué <i class="fa fa-heart"></i> par
+                  Distribué <i class="fa fa-heart"></i> par
                   <a
                     target="_blank"
                     href="{% static 'https://themewagon.com/' %}"
