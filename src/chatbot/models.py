@@ -18,4 +18,8 @@ class EchangeAdmin(admin.ModelAdmin):
 class Question(models.Model):
     text = models.TextField()
     answer = models.TextField()
+
     
+
+
+   

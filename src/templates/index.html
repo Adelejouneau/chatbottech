@@ -940,10 +940,11 @@
     <p>mettre une phrase d accroche</p>
 
     <form method="POST">
+      {% csrf_token %} 
       <p>{{answer}}</p>
 
       <label for="input"></label>
-      <input type="text" name="formulaire" id="formulaire" placeholder="Entrez vos questions..."/>{{response}}
+      <input type="text" name="message" id="message" value="{{message}}" placeholder="Entrez vos questions..."/>{{response}}
       <button type="submit">Valider</button>
     </form>
 {%endif%}
