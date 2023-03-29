@@ -1606,6 +1606,7 @@ xkeyframes
 }
 .footer-brand {
   float: left;
+  margin-bottom: 15px;
 }
 
 .footer-brand > img {
@@ -1613,6 +1614,7 @@ xkeyframes
 }
 .copyright {
   text-align: right;
+  margin-top: 26px;
 }
 .copyright p {
   font-size: 1.125rem;
