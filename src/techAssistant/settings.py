@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import nltk 
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,9 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'techAss.apps.TechAssConfig',
     'chatbot.apps.ChatbotConfig',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'post',
+    # 'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'post',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': 
+#                   ['rest_framework.authentication.TokenAuthentication',],}

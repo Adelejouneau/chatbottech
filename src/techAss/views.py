@@ -6,24 +6,17 @@ from .models import TechAssPages
 # Create your views here.
 def home(request):
     rsChatbotPage = TechAssPages.objects.all()
-
     data = {
+        "page" :'detail',
         "prenom":"Les Décodeuses",
         "chatbotPage": rsChatbotPage,
-            }
-
+    }
     template = loader.get_template('index.html')
     return HttpResponse(template.render(data))
 
 def chatbot(request):
-    if request.GET.get("page"):
-        rs = TechAssPages.objects.get(title = request.GET["page"])
-    else:
-        rs = TechAssPages.objects.get(title="")
-        
-    data = {'title': rs.title, "content": rs.content, "date": rs.date}
-
-    template = loader.get_template("chatbot.html")
+    data = {'page': 'chatbot',}
+    template = loader.get_template("index.html")
     return HttpResponse(template.render(data))
 
 

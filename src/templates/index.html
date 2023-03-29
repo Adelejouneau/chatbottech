@@ -52,6 +52,7 @@
 
     <script src="{% static 'soft-tech/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
   </head>
+
   <body>
     {% load static %}
     <!--[if lt IE 8]>
@@ -64,9 +65,9 @@
 
     <!--teste pour les liens -->
 
-        <table>
+        <!-- <table>
       <tr>
-        <th>page</th>
+        <th></th>
       </tr>
       {% for page in pages %}
 
@@ -78,7 +79,7 @@
         <td>{{page.date}}</td>
       </tr>
       {% endfor %}
-    </table>
+    </table> -->
     <!------------------------->
 
     <!-- Sections -->
@@ -148,7 +149,9 @@
               <a href="{% static '#business' %}">Appareils électroniques</a>
             </li>
             <li><a href="{% static '#business' %}">Tendances techs</a></li>
+
             <li><a href="{% static '#contact' %}">Contact</a></li>
+
             <li class="login"><a href="#">S'inscrire</a></li>
           </ul>
         </div>
@@ -156,7 +159,6 @@
       </div>
       <!-- /.container-fluid -->
     </nav>
-
     <!--Home page style-->
     <header id="home" class="home">
       <div class="overlay-fluid-block">
@@ -196,6 +198,7 @@
         </div>
       </div>
     </header>
+{% if page == 'detail' %}
 
     <!-- Sections -->
     <section id="features" class="features sections">
@@ -927,6 +930,23 @@
         </div>
       </div>
     </section>
+{%endif%}
+
+{%if page == 'chatbot'%}
+    <h1>{{titleChatbot}}</h1>
+    <h2>{{dateChatbot}}</h2>
+    <p>{{contentChatbot}}</p>
+
+    <p>mettre une phrase d accroche</p>
+
+    <form method="POST">
+      <p>{{answer}}</p>
+
+      <label for="input"></label>
+      <input type="text" name="formulaire" id="formulaire" placeholder="Entrez vos questions..."/>{{response}}
+      <button type="submit">Valider</button>
+    </form>
+{%endif%}
 
     <!--Footer-->
     <footer id="footer" class="footer">
