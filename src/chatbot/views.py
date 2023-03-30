@@ -4,6 +4,7 @@ from django.template import loader
 from chatbot.models import Echange
 from django.views.decorators.csrf import csrf_exempt
 
+import unicodedata
 import nltk
 from nltk.chat.util import Chat, reflections
 
@@ -199,6 +200,7 @@ def chatbot(request):
 		# pour la version simple
 		chat = Chat(pairs, reflections)
 		result = chat.respond(message)
+		texte_normalisé = unicodedata.normalize('NFKD', result).encode('ASCII', 'ignore').decode('utf-8')
 
 		datas['reponse'] = result
 		datas['message'] = message
