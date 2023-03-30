@@ -148,9 +148,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="{% static '#features' %}">Logiciels</a></li>
+            <li><a href="features">Logiciels</a></li>
             <li>
-              <a href="{% static '#service' %}">Programmations</a>
+              <a href="service">Programmations</a>
             </li>
             <li><a href="{% static '#price' %}">Cybersécurités</a></li>
             <li>
@@ -242,7 +242,10 @@
         </div>
       </div>
     </section>
+    {% endif %}
     <!--End of Features 2 Section -->
+    {% if page == 'service' %}
+
     <section id="features" class="features sections">
       <div class="container">
         <div class="row">
@@ -926,7 +929,9 @@
         </div>
       </div>
     </section>
-    {%endif%} {%if page == 'chatbot'%}
+    {%endif%} 
+    
+    {%if page == 'chatbot'%}
     <h1>{{titleChatbot}}</h1>
     <h2>{{dateChatbot}}</h2>
     <p>{{contentChatbot}}</p>
@@ -934,15 +939,19 @@
     <p>mettre une phrase d accroche</p>
 
     <form method="POST">
-      <p>{{answer}}</p>
-
+      {% csrf_token %}
+      
+      <h2>{{message}}</h2>
+      <p>{{reponse}}</p>
+      
+      
       <label for="input"></label>
       <input
         type="text"
-        name="formulaire"
-        id="formulaire"
-        placeholder="Entrez vos questions..."
-      />{{response}}
+        name="message"
+        id="message"
+        
+        placeholder="Entrez vos questions..."/>
       <button type="submit">Valider</button>
     </form>
     {%endif%}

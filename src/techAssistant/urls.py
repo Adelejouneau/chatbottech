@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from techAss import views
+from chatbot import views as chatbot_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     # path('api/', include('post.urls')),
-    path('chatbot/', views.chatbot, name="chatbot"),
+    path('service/', chatbot_views.service, name="service"),
+    path('chatbot/', chatbot_views.chatbot, name="chatbot"),
+
 ]
