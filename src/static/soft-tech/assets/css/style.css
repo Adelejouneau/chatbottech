@@ -550,9 +550,14 @@ textarea::-ms-input-placeholder {
   margin-top: -5px;
 }
 
+.navbar-brand > img {
+  border-radius: 56px;
+}
+
 /*For Home Section*/
 .home {
-  background: url(../../../femmes/femme3.jpg) no-repeat center center;
+  background: url(../../../logiciel/concept-entreprise-equipe-se-bouchent.jpg)
+    no-repeat center center;
   color: #000;
   background-size: cover;
   -webkit-background-size: cover;
@@ -628,7 +633,7 @@ textarea::-ms-input-placeholder {
   height: 460px;
 }
 .single_features_right {
-  margin-top: 10%;
+  margin-top: -6%;
 }
 
 .single_features_right h2 {
@@ -1601,9 +1606,15 @@ xkeyframes
 }
 .footer-brand {
   float: left;
+  margin-bottom: 15px;
+}
+
+.footer-brand > img {
+  border-radius: 108px;
 }
 .copyright {
   text-align: right;
+  margin-top: 26px;
 }
 .copyright p {
   font-size: 1.125rem;
