@@ -936,13 +936,13 @@
     <h2>{{dateChatbot}}</h2>
     <p>{{contentChatbot}}</p>
 
-    <p>mettre une phrase d accroche</p>
+    <p class="ph">mettre une phrase d accroche</p>
 
     <form method="POST">
       {% csrf_token %}
       
       <h2>{{message}}</h2>
-      <p>{{reponse}}</p>
+      <p class="reponse">{{reponse}}</p>
       
       
       <label for="input"></label>
@@ -952,7 +952,7 @@
         id="message"
         
         placeholder="Entrez vos questions..."/>
-      <button type="submit">Valider</button>
+      <button class="valider" type="submit">Valider</button>
     </form>
     {%endif%}
 
