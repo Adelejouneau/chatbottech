@@ -68,6 +68,25 @@
       </p>
     <![endif]-->
 
+    <!--teste pour les liens -->
+
+    <!-- <table>
+      <tr>
+        <th></th>
+      </tr>
+      {% for page in pages %}
+
+      <tr>
+        <td>
+          <a href="/chatbot/?page={{page.titleChatbot}}"> {{page.titleChatbot}}</a>
+        </td>
+
+        <td>{{page.date}}</td>
+      </tr>
+      {% endfor %}
+    </table> -->
+    <!------------------------->
+
     <!-- Sections -->
     <section id="social" class="social">
       <div class="container">
@@ -921,7 +940,20 @@
       
       <div class="ansewr-chat">
       <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
-      
+    {%endif%} {%if page == 'chatbot'%}
+    <h1>{{titleChatbot}}</h1>
+    <h2>{{dateChatbot}}</h2>
+    <p>{{contentChatbot}}</p>
+
+    <p class="ph">mettre une phrase d accroche</p>
+
+    <form method="POST">
+      {% csrf_token %}
+
+      <h2>{{message}}</h2>
+      <p class="reponse">{{reponse}}</p>
+
+      <label for="input"></label>
       <input
         type="text"
         name="message"
@@ -939,6 +971,10 @@
       </div>
       </form>
     </section>
+        placeholder="Entrez vos questions..."
+      />
+      <button class="valider" type="submit">Valider</button>
+    </form>
     {%endif%}
 
     <!--Footer-->
@@ -993,7 +1029,7 @@
     <script src="{% static './soft-tech/assets/js/vendor/bootstrap.min.js' %}"></script>
 
     <script src="{% static './soft-tech/assets/js/plugins.js' %}"></script>
-    <script src="{% static './soft-tech/assets/js/modernizr.js' %}"></script>
+    <script src="{% static './soft-tech/asassets/js/modernizr.js' %}"></script>
     <script src="{% static './soft-tech/assets/js/main.js' %}"></script>
   </body>
 </html>
