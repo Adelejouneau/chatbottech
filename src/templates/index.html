@@ -68,25 +68,6 @@
       </p>
     <![endif]-->
 
-    <!--teste pour les liens -->
-
-    <!-- <table>
-      <tr>
-        <th></th>
-      </tr>
-      {% for page in pages %}
-
-      <tr>
-        <td>
-          <a href="/chatbot/?page={{page.titleChatbot}}"> {{page.titleChatbot}}</a>
-        </td>
-
-        <td>{{page.date}}</td>
-      </tr>
-      {% endfor %}
-    </table> -->
-    <!------------------------->
-
     <!-- Sections -->
     <section id="social" class="social">
       <div class="container">
@@ -243,7 +224,6 @@
       </div>
     </section>
     {% endif %}
-
     <!--End of Features 2 Section -->
     {% if page == 'service' %}
 
@@ -930,11 +910,8 @@
         </div>
       </div>
     </section>
-    {%endif%} {%if page == 'chatbot'%}
-    <h1>{{titleChatbot}}</h1>
-    <h2>{{dateChatbot}}</h2>
-    <p>{{contentChatbot}}</p>
 
+    {%endif%} {%if page == 'chatbot'%}
     <p class="ph">mettre une phrase d accroche</p>
 
     <form method="POST">
