@@ -19,7 +19,7 @@
 
     <!--Google fonts links-->
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i'"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
       rel="stylesheet"
     />
 
@@ -188,8 +188,8 @@
         </div>
       </div>
     </header>
-    {% if page == 'detail' %}
 
+    {% if page == 'detail' %}
     <!-- Sections -->
     <section id="features" class="features sections">
       <div class="container">
@@ -227,7 +227,6 @@
 
     <!--End of Features 2 Section -->
     {% if page == 'service' %}
-
     <section id="features" class="features sections">
       <div class="container">
         <div class="row">
@@ -914,31 +913,32 @@
     {%endif%} 
     
     {%if page == 'chatbot'%}
-
-    <h1>{{titleChatbot}}</h1>
-    <h2>{{dateChatbot}}</h2>
-    <p>{{contentChatbot}}</p>
-
-    <p class="ph">Bonjour! Quelle est votre demande?</p>
-    
-    <form method="POST">
+    <section class="body-chat">
+      <p class="ph">Bonjour! WonderTechs bot</p>
+      
+      <form method="POST">
       {% csrf_token %}
-      <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" />
       
-      <h2>{{message}}</h2>
-      <p class="reponse">{{reponse}}</p>
+      <div class="ansewr-chat">
+      <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
       
-      
-      <label for="input"></label>
-      <img src="{% static 'profil-bleu.png' %}" alt="profil" width="50"/>
       <input
         type="text"
         name="message"
         id="message"
+        class="message"
+        placeholder="Entrez vos questions..."
+        />
+        <button class="valider" type="submit">Valider</button>
+      </div>
+      <div class="reponse-chat">
+        <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" class="chatbot1" />
+        <h2>{{message}}</h2>
+        <p class="reponse">{{reponse}}</p>
         
-           placeholder="Entrez vos questions..."/>
-      <button class="valider" type="submit">Valider</button>
-    </form>
+      </div>
+      </form>
+    </section>
     {%endif%}
 
     <!--Footer-->
