@@ -3,6 +3,7 @@ from django.template import loader
 from django.shortcuts import render
 from .models import TechAssPages
 
+
 # Create your views here.
 def home(request):
     rsChatbotPage = TechAssPages.objects.all()
