@@ -651,8 +651,6 @@ textarea::-ms-input-placeholder {
 }
 
 /* Service2 Section */
-.service2 {
-}
 .service_content {
   width: 90%;
   margin: 0 auto;
@@ -1664,23 +1662,64 @@ xkeyframes
 /*rajout css*/
 .reponse{
   border: 1px #131010 solid;;
-  width: 1000px;
-  height: 500px;
+  width: 600px;
+  height: 300px;
   margin-left: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
 }
 .valider{
-  background-color: #32e10a;
-  margin-left: 70px;
-  width: 100px;
+  background-color: #b5d6ad;
+
+  width: 200px;
+  height: 50px;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 5px;
+  margin-top: 5px;
+  
+  
+
 }
 .ph{
   margin-left: 30px;
   font-weight: bold;
   width: 150px;
 }
-#message{
-  margin-left: 30px;
+.message{
+  width: 600px;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
+}
+.body-chat{
+  background-color: #51899faf;
+  width: 1500px;
+  height: 1000px;
+  padding: 5px;
+
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 65px;
+  border-radius: 10px;
+
 
 }
+.ansewr-chat{
+  margin-left: 30px;
+ 
+}
+.reponse-chat{
+  margin-left: 700px;
+}
+.chatbot1{
+  margin-left: 590px;
+}
+
+
+
+
+
+
+

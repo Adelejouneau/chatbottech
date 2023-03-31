@@ -929,6 +929,41 @@
       />
       <button class="valider" type="submit">Valider</button>
     </form>
+
+    <!--Dans la fonction de votre chatbot
+on définie une variable "history" dans le datas que vous transmettez à la page
+datas['history']= []
+# on récupère le champs caché sur le formulaire qui contient l'historique si on a déjà discuté avec le chatbot
+texthistory = request.POST['history']
+# si on a un historique dans le champs, il faut le récupérer au format json
+##### penser à faire un "import json" en début de programme
+if (texthistory):
+	json_dat = json.dumps(ast.literal_eval(texthistory))
+        datas['history'] = json.loads(json_dat)
+# on conserve les échange dans l'historique
+msgUser = {"type" : "user", "content": message}
+datas['history'].append(msgUser)
+msgBot = {"type" : "bot", "content": reponse}
+datas['history'].append(msgBot)
+le datas est transmis au renderer
+
+
+
+
+
+14 h 37
+La partie affichant les échange de message à partir de la liste des questions réponses présente dans le tableau des historiques
+        <div id="reponses"  class="chat-container" >
+            {% for msg in history %}
+                {% if msg.type == "user" %}
+                    <div class="chat-bubble user">{{ msg.content }}</div>
+                {% else %}
+                    <div class="chat-bubble bot">{{ msg.content }}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+Le champs "caché" contenant le tableau des historiques à positionner dans le formulaire de saisie des questions
+ <input type="hidden" size=80 name="history" value="{{history}}">-->
     {%endif%}
 
     <!--Footer-->
