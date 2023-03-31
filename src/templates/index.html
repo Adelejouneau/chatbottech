@@ -68,25 +68,6 @@
       </p>
     <![endif]-->
 
-    <!--teste pour les liens -->
-
-    <!-- <table>
-      <tr>
-        <th></th>
-      </tr>
-      {% for page in pages %}
-
-      <tr>
-        <td>
-          <a href="/chatbot/?page={{page.titleChatbot}}"> {{page.titleChatbot}}</a>
-        </td>
-
-        <td>{{page.date}}</td>
-      </tr>
-      {% endfor %}
-    </table> -->
-    <!------------------------->
-
     <!-- Sections -->
     <section id="social" class="social">
       <div class="container">
@@ -243,6 +224,7 @@
       </div>
     </section>
     {% endif %}
+
     <!--End of Features 2 Section -->
     {% if page == 'service' %}
 
@@ -932,26 +914,29 @@
     {%endif%} 
     
     {%if page == 'chatbot'%}
+
     <h1>{{titleChatbot}}</h1>
     <h2>{{dateChatbot}}</h2>
     <p>{{contentChatbot}}</p>
 
-    <p class="ph">mettre une phrase d accroche</p>
-
+    <p class="ph">Bonjour! Quelle est votre demande?</p>
+    
     <form method="POST">
       {% csrf_token %}
+      <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" />
       
       <h2>{{message}}</h2>
       <p class="reponse">{{reponse}}</p>
       
       
       <label for="input"></label>
+      <img src="{% static 'profil-bleu.png' %}" alt="profil" width="50"/>
       <input
         type="text"
         name="message"
         id="message"
         
-        placeholder="Entrez vos questions..."/>
+           placeholder="Entrez vos questions..."/>
       <button class="valider" type="submit">Valider</button>
     </form>
     {%endif%}
@@ -1008,7 +993,7 @@
     <script src="{% static './soft-tech/assets/js/vendor/bootstrap.min.js' %}"></script>
 
     <script src="{% static './soft-tech/assets/js/plugins.js' %}"></script>
-    <script src="{% static './soft-tech/asassets/js/modernizr.js' %}"></script>
+    <script src="{% static './soft-tech/assets/js/modernizr.js' %}"></script>
     <script src="{% static './soft-tech/assets/js/main.js' %}"></script>
   </body>
 </html>
