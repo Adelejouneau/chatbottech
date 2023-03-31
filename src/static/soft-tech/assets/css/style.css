@@ -1662,4 +1662,24 @@ xkeyframes
   text-decoration: none;
 }
 /*rajout css*/
- 
+.reponse{
+  border: 1px #131010 solid;;
+  width: 1000px;
+  height: 500px;
+  margin-left: 30px;
+}
+.valider{
+  background-color: #32e10a;
+  margin-left: 70px;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.ph{
+  margin-left: 30px;
+  font-weight: bold;
+}
+#message{
+  margin-left: 30px;
+
+}
