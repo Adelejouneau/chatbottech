@@ -918,10 +918,11 @@
       
       <form method="POST">
       {% csrf_token %}
+      <div id="question" class="chat-container">
       
       <div class="ansewr-chat">
       <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
-      
+      <div id="reponse" class="chat-container">
       <input
         type="text"
         name="message"
@@ -931,15 +932,26 @@
         />
         <button class="valider" type="submit">Valider</button>
       </div>
+      
       <div class="reponse-chat">
         <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" class="chatbot1" />
         <h2>{{message}}</h2>
         <p class="reponse">{{reponse}}</p>
+
+        {% for msg in history %}
+          {% if msg.type == "user" %}
+            <div class="wonderChat user">{{msg.content}}</div>
+          {% else %}
+            <div class="wonderChat bot">{{msg.content}}</div>
+          {%endif%}
+        </div>
+        {%endfor%}
         
       </div>
       </form>
     </section>
-    {%endif%}
+    {%endif%} 
+    
     <!--fin chat bot-->
 
     <!--Footer-->
