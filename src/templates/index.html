@@ -931,29 +931,14 @@
     </section>
     {%endif%} 
     
+    <!--debut chat bot-->
     {%if page == 'chatbot'%}
     <section class="body-chat">
       <p class="ph">Bonjour! WonderTechs bot</p>
-      
       <form method="POST">
       {% csrf_token %}
-      
       <div class="ansewr-chat">
       <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
-    {%endif%} {%if page == 'chatbot'%}
-    <h1>{{titleChatbot}}</h1>
-    <h2>{{dateChatbot}}</h2>
-    <p>{{contentChatbot}}</p>
-
-    <p class="ph">mettre une phrase d accroche</p>
-
-    <form method="POST">
-      {% csrf_token %}
-
-      <h2>{{message}}</h2>
-      <p class="reponse">{{reponse}}</p>
-
-      <label for="input"></label>
       <input
         type="text"
         name="message"
@@ -967,15 +952,11 @@
         <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" class="chatbot1" />
         <h2>{{message}}</h2>
         <p class="reponse">{{reponse}}</p>
-        
       </div>
       </form>
     </section>
-        placeholder="Entrez vos questions..."
-      />
-      <button class="valider" type="submit">Valider</button>
-    </form>
     {%endif%}
+    <!--fin chat bot-->
 
     <!--Footer-->
     <footer id="footer" class="footer">
