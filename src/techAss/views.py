@@ -19,4 +19,12 @@ def chatbot(request):
     template = loader.get_template("index.html")
     return HttpResponse(template.render(data))
 
+def contact(request):
+    data = {'page': 'contact',}
+    template = loader.get_template("index.html")
+    return HttpResponse(template.render(data))
 
+def logiciel(request):
+    data = {'page': 'logiciel',}
+    template = loader.get_template("index.html")
+    return HttpResponse(template.render(data))

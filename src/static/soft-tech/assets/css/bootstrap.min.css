@@ -3,7 +3,7 @@
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */ /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-html {
+ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -16,7 +16,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
@@ -25,6 +24,10 @@ nav,
 section,
 summary {
   display: block;
+}
+
+footer{
+  display: flex;
 }
 audio,
 canvas,
@@ -1391,6 +1394,8 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -4038,8 +4043,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  height: 50px;
-  padding: 18px 9px 0px;
+  height: 80px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -5880,7 +5884,6 @@ button.close {
   padding: 15px;
 }
 .modal-footer {
-  padding: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }

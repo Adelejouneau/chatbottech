@@ -9,7 +9,7 @@
     {% load static %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>wonderTechs</title>
+    <title>WonderTechs</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -89,7 +89,7 @@
                 >
                 <a href="mailto:ikram@decodeuses.org"
                   ><i class="fa fa-envelope"></i
-                  >wonderTechs@assistantestech.com</a
+                  >wondertechs@assistantestech.com</a
                 ><!--nom de la team-->
               </div>
             </div>
@@ -119,8 +119,9 @@
           <a class="navbar-brand" href="#">
             <img
               src="{% static './soft-tech/assets/images/logo.svg' %}"
-              width="100"
+              width="0"
               alt="Logo"
+              class="logoheader"
             />
           </a>
         </div>
@@ -129,25 +130,35 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="features">Logiciels</a></li>
+            <li><a href="/logiciel">Logiciels</a></li>
             <li>
-              <a href="service">Programmations</a>
+              <a href="/service">Nos services</a>
             </li>
-            <li><a href="{% static '#price' %}">Cybersécurités</a></li>
             <li>
-              <a href="{% static '#business' %}">Appareils électroniques</a>
+              <a href="/cybersecurite">Cybersécurité</a>
             </li>
-            <li><a href="{% static '#business' %}">Tendances techs</a></li>
-
-            <li><a href="{% static '#contact' %}">Contact</a></li>
-
-            <li class="login"><a href="#">S'inscrire</a></li>
+            <li>
+              <a href="/tendancestech">Tendances techs</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+            <li>
+              <a href="/chatbot">Chatbot</a>
+            </li>
+            <li class="login"><a href="#">S'inscrire</a>
+            </li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
       </div>
       <!-- /.container-fluid -->
     </nav>
+  
+    
+    <!--Start HOME PAGE Sections -->
+    {% if page == 'detail' %}
+
     <!--Home page style-->
     <header id="home" class="home">
       <div class="overlay-fluid-block">
@@ -156,31 +167,10 @@
             <div class="home-wrapper">
               <div class="col-md-10 col-md-offset-1">
                 <div class="home-content">
-                  <h1>WonderTechs la solution a vos questions</h1>
-                  <p>
-                    bienvenu sur notre site d assistance techno exclusivement
-                    feminines pour vous accompagner et aider
+                  <h1>Tech Assistance by WonderTechs</h1>
+                  <h1>La solution à vos questions !</h1>
+                  <p>Bienvenue sur notre site d'assistance technologique exclusivement féminin pour vous accompagner et vous aider dans vos projets
                   </p>
-
-                  <div class="row">
-                    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
-                      <div class="home-contact">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Entrez votre email"
-                          />
-                          <input
-                            type="submit"
-                            class="form-control"
-                            value="Essayer"
-                          />
-                        </div>
-                        <!-- /input-group -->
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -188,9 +178,7 @@
         </div>
       </div>
     </header>
-    {% if page == 'detail' %}
 
-    <!-- Sections -->
     <section id="features" class="features sections">
       <div class="container">
         <div class="row">
@@ -200,7 +188,6 @@
                 <img src="{% static './logiciel/main-robot.jpg' %}" alt="" />
               </div>
             </div>
-
             <div class="col-sm-6 margin-top-60">
               <div class="single_features_right">
                 <h2>Notre offre d'assistance Technique</h2>
@@ -223,9 +210,47 @@
         </div>
       </div>
     </section>
+
+<!-- start Partie1 -->
+<section id="feature1">
+  <div class="container">
+    <div class="accueil1">
+      <div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
+        <h2 class="text-uppercase">Our Software Features</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span><i class="fa fa-mobile"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><i class="fa fa-code"></i>Quis autem velis reprehenderit et quis voluptate velit esse quam.</p>
+      </div>
+      <div class="col-md-6 wow fadeInRight" data-wow-delay="0.6s">
+        <img src="{% static './logiciel/software-img.png' %}" class="img-responsive" alt="feature img">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end Partie1 -->
+
+<!-- start Partie2 -->
+<section id="feature2">
+  <div class="container">
+    <div class="accueil1">
+      <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <img src="{% static './logiciel/contact-bg.jpg' %}" class="img-responsive" alt="feature img">
+      </div>
+      <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
+        <h2 class="text-uppercase">More of Your Software</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><span><i class="fa fa-mobile"></i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p><i class="fa fa-code"></i>Quis autem velis reprehenderit et quis voluptate velit esse quam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end Partie 2 -->
     {% endif %}
-    <!--End of Features 2 Section -->
-    {% if page == 'service' %}
+<!--End of HOMME PAGE Section -->
+
+ <!--START Services Section -->
+  {% if page == 'service' %}
 
     <section id="features" class="features sections">
       <div class="container">
@@ -258,7 +283,6 @@
         </div>
       </div>
     </section>
-    <!--End of Features 2 Section -->
 
     <section id="service" class="service2 sections lightbg">
       <div class="container">
@@ -637,11 +661,17 @@
       <!-- .cd-pricing-container -->
     </section>
 
-    <!-- Sections -->
+  {%endif%}
+  <!--End of SERVICES PAGES Section -->
+
+
+<!--START of LOGICIELS PAGE Section -->
+{%if page == 'logiciel'%}
+
     <section id="business" class="portfolio sections">
       <div class="container">
         <div class="head_title text-center">
-          <h1>Notre agence d assistance tech</h1>
+          <h1>Nos logiciels</h1>
           <p>
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -654,7 +684,7 @@
               <div class="community-edition">
                 <i class="fa-solid fa-gears"></i>
                 <div class="separator"></div>
-                <h4>Logiciels</h4>
+                <h4>Professionnels</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -667,7 +697,7 @@
               <div class="community-edition">
                 <i class="fa-solid fa-code"></i>
                 <div class="separator"></div>
-                <h4>Programmations</h4>
+                <h4>Programmation</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -680,7 +710,7 @@
               <div class="community-edition">
                 <i class="fa-solid fa-shield-halved"></i>
                 <div class="separator"></div>
-                <h4>Cybersécurités</h4>
+                <h4>Cybersécurité</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -693,7 +723,7 @@
               <div class="community-edition">
                 <i class="fa-regular fa-floppy-disk"></i>
                 <div class="separator"></div>
-                <h4>Électronquies</h4>
+                <h4>Industriels</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -704,14 +734,13 @@
           </div>
         </div>
 
-        <!-- Example row of columns -->
         <div class="row">
           <div class="portfolio-wrapper2 text-center">
             <div class="col-md-3 col-sm-6 col-xs-12">
               <div class="community-edition">
                 <i class="fa-solid fa-pager"></i>
                 <div class="separator"></div>
-                <h4>Tendances</h4>
+                <h4>Jeux Vidéos</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -724,7 +753,7 @@
               <div class="community-edition">
                 <i class="fa fa-tree"></i>
                 <div class="separator"></div>
-                <h4>Com</h4>
+                <h4>Dessin</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -737,7 +766,7 @@
               <div class="community-edition">
                 <i class="fa fa-paper-plane-o"></i>
                 <div class="separator"></div>
-                <h4>Community Edition</h4>
+                <h4>Messagerie</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -750,7 +779,7 @@
               <div class="community-edition">
                 <i class="fa fa-folder-open"></i>
                 <div class="separator"></div>
-                <h4>Community Edition</h4>
+                <h4>Edition</h4>
                 <p>
                   Visually explore your data through a free-form drag-and-drop
                   canvas, a broad range of modern data visualizations, and an
@@ -763,6 +792,12 @@
       </div>
       <!-- /container -->
     </section>
+
+    {%endif%}
+    <!--END of LOGICIELS PAGE Section -->
+
+    <!-- START of CONTACT PAGE Section -->
+     {%if page == 'contact'%}
 
     <section id="contact" class="contact sections">
       <div class="container">
@@ -847,13 +882,50 @@
         </div>
       </div>
     </section>
-    <!-- End of Contact Section -->
 
+    {%endif%}
+    <!-- END of CONTACT PAGE Section -->
+
+    <!--START of CHATBOT PAGE Section-->
+{%if page == 'chatbot'%}
+<section class="body-chat">
+  <p class="ph">Bonjour! WonderTechs bot</p>
+  <form method="POST">
+  {% csrf_token %}
+  <div class="ansewr-chat">
+  <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
+  <input
+    type="text"
+    name="message"
+    id="message"
+    class="message"
+    placeholder="Entrez vos questions..."
+    />
+    <button class="valider" type="submit">Valider</button>
+  </div>
+  <div class="reponse-chat">
+    <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" class="chatbot1" />
+    <h2>{{message}}</h2>
+    <p class="reponse">{{reponse}}</p>
+  </div>
+  </form>
+</section>
+{%endif%}
+<!--END of CHATBOT PAGE section -->
+    
+<!-- START of FOOTER Section -->
     <section id="footer-menu" class="sections footer-menu">
-      <div class="container">
-        <div class="row">
+      <div class="container-foot" >
+        <div>
           <div class="footer-menu-wrapper">
-            <div class="col-md-8 col-sm-12 col-xs-12">
+            <div class="toto">
+              <div class="footer-brand">
+                <img
+                  src="{% static './soft-tech/assets/images/logo.svg' %}"
+                  alt="logo"
+                  width="220"
+                  class="logofooter"/>
+              </div>
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="menu-item">
                   <h5>Liens Rapides</h5>
@@ -875,7 +947,6 @@
                   </ul>
                 </div>
               </div>
-
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="menu-item">
                   <h5>Information</h5>
@@ -887,72 +958,33 @@
                   </ul>
                 </div>
               </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="menu-item">
+                  <h5>Newsletter</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Recusandae tempore consectetur ab? Accusamus sequi soluta
+                  </p>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Entrez votre email"
+                    />
+                    <input type="submit" class="form-control" value="Essayer" />
+                  </div>
             </div>
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="menu-item">
-                <h5>Newsletter</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae tempore consectetur ab? Accusamus sequi soluta
-                </p>
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Entrez votre email"
-                  />
-                  <input type="submit" class="form-control" value="Essayer" />
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    {%endif%} 
+   <!--End of the Footer Section-->
     
-    <!--debut chat bot-->
-    {%if page == 'chatbot'%}
-    <section class="body-chat">
-      <p class="ph">Bonjour! WonderTechs bot</p>
-      <form method="POST">
-      {% csrf_token %}
-      <div class="ansewr-chat">
-      <img src="{% static 'profil-bleu.png' %}" alt="profil" class="profil-b" width="50"/>
-      <input
-        type="text"
-        name="message"
-        id="message"
-        placeholder="Entrez vos questions..."
-        />
-        <button class="valider" type="submit">Valider</button>
-      </div>
-      <div class="reponse-chat">
-        <img src="{% static './soft-tech/assets/images/chatbot1.png' %}" alt="chatbot" width="50" class="chatbot1" />
-        <h2>{{message}}</h2>
-        <p class="reponse">{{reponse}}</p>
-      </div>
-      </form>
-    </section>
-    {%endif%}
-    <!--fin chat bot-->
 
-    <!--Footer-->
+    <!--Begin of the Footer2-->
     <footer id="footer" class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-wrapper">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-              <div class="footer-brand">
-                <img
-                  src="{% static './soft-tech/assets/images/logo.svg' %}"
-                  alt="logo"
-                  width="200"
-                />
-              </div>
-            </div>
-
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="copyright">
                 <p>
@@ -965,26 +997,11 @@
                   >2016. Tous droits réservés.
                 </p>
               </div>
-
-              <div class="copyright">
-                <p>
-                  Distribué <i class="fa fa-heart"></i> par
-                  <a
-                    target="_blank"
-                    href="{% static 'https://themewagon.com/' %}"
-                    >Themewagon</a
-                  >2016. Tous droits réservés.
-                </p>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="scrollup">
+              <a href="#"><i class="fa fa-chevron-up"></i></a>
+            </div>
     </footer>
-
-    <div class="scrollup">
-      <a href="#"><i class="fa fa-chevron-up"></i></a>
-    </div>
 
     <script src="{% static './soft-tech/assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
     <script src="{% static './soft-tech/assets/js/vendor/bootstrap.min.js' %}"></script>

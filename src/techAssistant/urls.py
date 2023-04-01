@@ -24,5 +24,6 @@ urlpatterns = [
     # path('api/', include('post.urls')),
     path('service/', chatbot_views.service, name="service"),
     path('chatbot/', chatbot_views.chatbot, name="chatbot"),
-
+    path('contact/', chatbot_views.contact, name="contact"),
+    path('logiciel/', chatbot_views.logiciel, name="logiciel")
 ]
