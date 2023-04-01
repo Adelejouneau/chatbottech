@@ -177,6 +177,16 @@ def service(request):
 
 	return HttpResponse(template.render(datas))
 
+def contact(request):
+	datas['page'] = 'contact'
+
+	return HttpResponse(template.render(datas))
+
+def logiciel(request):
+	datas['page'] = 'logiciel'
+
+	return HttpResponse(template.render(datas))
+
 @csrf_exempt
 def chatbot(request):
 	datas['result'] = ""
