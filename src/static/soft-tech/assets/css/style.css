@@ -45,6 +45,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
    .btn:active {
      outline: inherit;
    }
+
    *,
    *:before,
    *:after {
@@ -137,17 +138,12 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
      font-size: 1.3rem;
      margin-bottom: 1rem;
    }
-   h6 {
-     font-size: 1rem;
-     margin-bottom: 0.9rem;
-   }
+
    p {
      line-height: 1.5rem;
      font-size: 1.1rem;
    }
-   p:last-child {
-     margin-bottom: 0px;
-   }
+
    /*.home-wrap h1,*/
    .home-wrap h2,
    .home-wrap h3,
@@ -216,10 +212,6 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
    section .subtitle-half h5 {
      font-weight: 100;
      font-size: 12px;
-   }
-   
-   .logoheader {
-   
    }
    
    .heading {
@@ -576,12 +568,11 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
    .home-content h1 {
      font-size: 48px;
      font-weight: 700;
-     margin-bottom: 30px;
      color: #fff;
    }
    .home-content p {
-     margin-bottom: 30px;
      color: #fff;
+     font-size: large;
    }
    .home-content .home-contact {
      margin-top: 90px;
@@ -1172,18 +1163,6 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
      align-items: center;
    }
    
-     /* FOOTER*/
-   
-   .toto{
-     display: flex;
-     flex-direction: row;
-     align-content: space-between;
-     align-items: center;
-     }
-     
-     .logofooter{
-       padding-right: 25px;
-     }
    
    .cd-pricing-footer {
      position: absolute;
@@ -1691,27 +1670,136 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
      margin-left: -6px;
      text-decoration: none;
    }
+  
+
+
    /*rajout css*/
-   .reponse{
-     border: 1px #131010 solid;;
-     width: 1000px;
-     height: 500px;
-     margin-left: 30px;
-   }
-   .valider{
-     background-color: #32e10a;
-     margin-left: 70px;
-     width: 100px;
-     cursor: pointer;
-     font-weight: bold;
-   }
-   .ph{
-     margin-left: 30px;
-     font-weight: bold;
-     width: 150px;
-   }
-   #message{
-     margin-left: 30px;
+
+   .titrechatbot{
+    color: #000;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%), url(../../../logiciel/wonderbot2.jpg)  no-repeat center center;    
+    background-size: cover;
+   text-align: center;
+   font-weight: bolder;
+   font-size: larger;
+}
+
+.body-chat{
+  background-color: #51899faf;
+  width: 1550px;
+  height: 500px;
+  padding: 5px;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-left: 65px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
+  padding-bottom: 15px;
+}
+
+.corpschat{
+  display: flex;
+  flex-direction: column;
+}
+
+.avataruser{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.affichagequestion{
+  width: 800px;
+  height: 55px;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 15px;
+  font-size: 1.1em;
+  align-items: center;
+}
+
+.reponse-chat{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.reponse{
+  border: 1px #131010 solid;
+  width: 700px;
+  height: 200px;
+  margin-left: 30px;
+  background-color: #def2d9;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
+  padding: 10px;
+}
+
+.chatbot1{
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.ph{
+  margin-left: 30px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.answer-chat{
+  margin-left: 300px; 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.message{
+  width: 800px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow:1px 2px 5px #271f1f;
+  margin-left: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.valider{
+  background-color: #b5d6ad;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+ /* FOOTER*/
    
-   }
-   
+ .toto{
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  }
+  
+  .logofooter{
+    padding-right: 25px;
+  }
