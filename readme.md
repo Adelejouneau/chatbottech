@@ -4,7 +4,7 @@
 
 
 
-**🚀Présentation du projet
+**🚀Présentation du projet**
 
 Développement d'un chatbot numérique en Python pour le client fictif "Tech Assistant".
 Le chatbot devra être capable de répondre à des questions sur les dernières tendances en matière de technologie, les appareils électroniques, les logiciels, la cybersécurité, les codes et les langages de programmation. 
@@ -12,14 +12,14 @@ Il devra également être capable de donner des conseils sur la résolution de p
 Le chatbot devra être développé en utilisant des bibliothèques de traitement du langage naturel telles que NLTK ou spaCy pour gérer les interactions utilisateur. Il devra aussi être capable de comprendre les contextes pour fournir des réponses plus précises.
 
 
-**🚀Technologies utilisées pour réaliser ce projet : 
+**🚀Technologies utilisées pour réaliser ce projet :**
 
 Django
 Vscode 
 NLTK
 Boostrap (template) 
 
-**🚀Langages de programmation utilisés : 
+**🚀Langages de programmation utilisés :**
 
 Python 
 HTML
@@ -27,11 +27,11 @@ CSS
 JavaScript 
 
 
-**🚀Pour installer le projet, l’utiliser et/ou le modifier : 
+**🚀Pour installer le projet, l’utiliser et/ou le modifier :**
 
 Avant d’installer le projet, il convient d’avoir des bases en code et en programmation tels que HTML, CSS et Python. 
 
-**Prérequis : 
+**Prérequis :**
 
 - Avoir un éditeur de code tel que Visual Studio Code 
 - Installer les composants suivants : 
@@ -40,7 +40,7 @@ Avant d’installer le projet, il convient d’avoir des bases en code et en pro
 •	Nltk => [https://www.nltk.org/] ou via votre console : pip install nltk
 •	Ast : pip install ast 
 
-**Déroulement de l’installation : 
+**Déroulement de l’installation :**
 
 Depuis le terminal/la console de votre éditeur de code, tapez la commande suivante : git clone https://github.com/Adelejouneau/chatbottech.git
 
@@ -50,7 +50,7 @@ Depuis le terminal/la console de votre éditeur de code, tapez la commande suiva
 - La console affichera l’url du projet et vous pourrez y avoir accès en cliquant dessus.  
 
 
-**Accès à la page d’administration Django du site internet : 
+**Accès à la page d’administration Django du site internet :**
 
 Sur l’URL du site dans votre navigateur, ajouter à la fin de l’URL /admin 
 Créer un nouvel utilisateur en cliquant sur « Utilisateurs » 
