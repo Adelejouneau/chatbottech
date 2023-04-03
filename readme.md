@@ -1,4 +1,4 @@
-# 🤖 Création d’un ChatBot 🤖
+# <center>🤖 Création d’un ChatBot 🤖</center>
 
 ## Bienvenue dans le projet 2 des Descodeuses : Latifa, Enkhé, Nassima & Adèle.
 
