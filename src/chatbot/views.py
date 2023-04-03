@@ -4,6 +4,9 @@ from django.template import loader
 from chatbot.models import Echange
 from django.views.decorators.csrf import csrf_exempt
 
+import json
+import ast
+
 import unicodedata
 import nltk
 from nltk.chat.util import Chat, reflections
@@ -156,7 +159,7 @@ if False:
 template = loader.get_template('index.html')
 datas= {'page':'home',
 		'menu' : [
-			{'label':'home', 'href':''},
+			{'label':'home', 'href':'index'},
 			{'label':'contact', 'href':'contact'},
 			{'label':'about', 'href':'about'},
 			{'label':'chatbot', 'href':'chatbot'},
@@ -189,32 +192,47 @@ def logiciel(request):
 
 @csrf_exempt
 def chatbot(request):
-	datas['result'] = ""
-	datas['message'] = ""
+	datas['history'] = []
+	datas['page'] = 'chatbot'
 
+	# datas['message'] = ""
+	print (request.method)
 	if request.method == 'POST':
-		message = request.POST['message']
+		
+		texthistory = request.POST['history']
+		print(texthistory)
+
+		# si on a un historique dans le champs, il faut le récupérer au format json
+		##### penser à faire un "import json" en début de programme
+
+		if (texthistory):
+			json_dat = json.dumps(ast.literal_eval(texthistory))
+			datas['history'] = json.loads(json_dat)
+
 		pairs = []
 		for question_reponse in Echange.objects.all():
 			question = question_reponse.question
 			reponse = question_reponse.reponse
-			# Création de la paire de question-réponse correspondante
+
+			# Création de la paire de question-réponse correspondante		
 			pair = [r"{}".format(question), reponse.split("|")]
+		
 			# Ajout de la paire à la liste des paires
+			print (pair)
 			pairs.append(pair)
 
-		# pour la version machine learning
-		# intents = pred_class(message, words, classes)
-		# result = get_response(intents, data)
+		message = request.POST["question"]
 
-		# pour la version simple
+		texte_normalisé = unicodedata.normalize('NFKD', message).encode('ASCII', 'ignore').decode('utf-8')
+
+			# pour la version simple
 		chat = Chat(pairs, reflections)
-		result = chat.respond(message)
-		texte_normalisé = unicodedata.normalize('NFKD', result).encode('ASCII', 'ignore').decode('utf-8')
+		reponse = chat.respond(texte_normalisé)
 
-		datas['reponse'] = result
-		datas['message'] = message
+		#on conserve les échanges dans l'historique
+		msgUser = {"type" : "user", "content": message}
+		datas["history"].append(msgUser)
+		msgBot = {"type" : "bot", "content": reponse}
+		datas["history"].append(msgBot)
 	
-	datas['page'] = 'chatbot'
-
 	return HttpResponse(template.render(datas))

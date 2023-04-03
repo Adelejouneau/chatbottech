@@ -187,13 +187,14 @@ def logiciel(request):
 def chatbot(request):
 	datas['history'] = ""
 	# datas['message'] = ""
-
+	print (request.method)
 	if request.method == 'POST':
 		
 		texthistory = request.POST['history']
+		print(texthistory)
 
-# si on a un historique dans le champs, il faut le récupérer au format json
-##### penser à faire un "import json" en début de programme
+		# si on a un historique dans le champs, il faut le récupérer au format json
+		##### penser à faire un "import json" en début de programme
 
 		if (texthistory):
 			json_dat = json.dumps(ast.literal_eval(texthistory))
@@ -211,19 +212,19 @@ def chatbot(request):
 		print (pair)
 		pairs.append(pair)
 
-	message = request.POST["question"]
+		message = request.POST["question"]
 
-	texte_normalisé = unicodedata.normalize('NFKD', result).encode('ASCII', 'ignore').decode('utf-8')
+		texte_normalisé = unicodedata.normalize('NFKD', result).encode('ASCII', 'ignore').decode('utf-8')
 
-		# pour la version simple
-	chat = Chat(pairs, reflections)
-	result = chat.respond(texte_normalisé)
+			# pour la version simple
+		chat = Chat(pairs, reflections)
+		result = chat.respond(texte_normalisé)
 
-#on conserve les échanges dans l'historique
-	msgUser = {"type" : "user", "content": message}
-	datas("history").append(msgUser)
-	msgBot = {"type" : "bot", "content": reponse}
-	datas("history").append(msgBot)
+		#on conserve les échanges dans l'historique
+		msgUser = {"type" : "user", "content": message}
+		datas["history"].append(msgUser)
+		msgBot = {"type" : "bot", "content": reponse}
+		datas["history"].append(msgBot)
 	
 	return HttpResponse(template.render(datas))
 

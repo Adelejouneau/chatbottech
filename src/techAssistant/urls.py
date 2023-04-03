@@ -20,10 +20,10 @@ from chatbot import views as chatbot_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name="home"),
-    # path('api/', include('post.urls')),
-    path('service/', chatbot_views.service, name="service"),
+    path('home/', views.home, name="home"),
     path('chatbot/', chatbot_views.chatbot, name="chatbot"),
-    path('contact/', chatbot_views.contact, name="contact"),
-    path('logiciel/', chatbot_views.logiciel, name="logiciel")
+    # path('cybersecurite/', views.cybersecurite, name="cybersecurite")
+    path('service/', views.service, name="service"),
+    path('contact/', views.contact, name="contact"),
+    path('logiciel/', views.logiciel, name="logiciel")
 ]
