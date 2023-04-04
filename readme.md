@@ -46,11 +46,16 @@ Depuis le terminal/la console de votre éditeur de code, tapez la commande suiva
 
 - Une fois le projet installé, lancez le serveur depuis votre terminal avec la commande suivante (Veuillez à bien vous positionner dans le dossier qui contient le fichier manage.py): python manage.py runserver 
 
-
 - La console affichera l’url du projet et vous pourrez y avoir accès en cliquant dessus.  
-
 
 **Accès à la page d’administration Django du site internet :**
 
 Sur l’URL du site dans votre navigateur, ajouter à la fin de l’URL /admin 
-Créer un nouvel utilisateur en cliquant sur « Utilisateurs » 
+Créer un nouvel utilisateur en cliquant sur "+ Ajouter" dans la section « Utilisateurs » 
+Choisissez votre identifiant et votre mot de passe 
+
+**Ajouter/modifier des questions dans le ChatBot**
+- Cliquer sur "Echanges" dans la section ChatBot. 
+- Vous avez la possibilité de modifier ou supprimer une question
+- Cliquez sur "+ Ajouter" pour ajouter une nouvelle question/réponse 
+- Pensez à enregister vos modifications 
