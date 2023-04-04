@@ -3,7 +3,7 @@
  * Copyright 2011-2014 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */ /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
- html {
+html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -26,7 +26,7 @@ summary {
   display: block;
 }
 
-footer{
+footer {
   display: flex;
 }
 audio,
@@ -1394,7 +1394,6 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-
 
 @media (min-width: 768px) {
   .container {

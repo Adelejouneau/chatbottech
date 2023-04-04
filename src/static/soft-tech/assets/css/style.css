@@ -69,6 +69,7 @@ p {
 ul {
   list-style: none;
   padding: 0;
+  padding-top: 27px;
 }
 
 img {
@@ -625,6 +626,7 @@ textarea::-ms-input-placeholder {
 
 .single_features_left img {
   height: 260px;
+  margin-top: 94px;
 }
 .single_features_right {
   margin-top: -6%;
@@ -1155,7 +1157,7 @@ container-foot {
 
 #feature1,
 #feature2 {
-  margin: 50px;
+  margin: 159px 50px;
 }
 
 .accueil1 {
